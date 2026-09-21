@@ -1,7 +1,7 @@
 const year = new Date().getFullYear();
 
 export const CONSTANTS = {
-  telephone: 933145008,
+  telephone: 931064400,
   email: "nospacotestv@gmail.com",
   year,
 };
