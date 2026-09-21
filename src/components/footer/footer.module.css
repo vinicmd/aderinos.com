@@ -1,0 +1,103 @@
+.footer {
+  background: #212529;
+  border-top: 4px solid #212529;
+  clear: both;
+  font-size: 0.9em;
+  padding: 20px 20px 60px;
+  position: relative;
+  color: white;
+}
+
+.footer p,
+.footer span,
+.footer h2,
+.footer div,
+.footer a {
+  color: white;
+}
+
+.main {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-evenly;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.policy {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.residence,
+.workHour,
+.contact {
+  text-align: center;
+}
+
+.paragraph {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.opening,
+.others {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #777;
+}
+
+.openHour,
+.otherHour {
+  color: white;
+}
+
+.number,
+.email {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contactNumber {
+  font-size: 25px;
+}
+
+.contactEmail {
+  font-size: 18px;
+}
+
+@media (max-width: 800px) {
+  .footer {
+    height: auto;
+  }
+
+  .residence {
+    margin-top: 20px;
+  }
+
+  .residence,
+  .workHour,
+  .others,
+  .policy {
+    height: 120px;
+  }
+
+  .mainContainer {
+    flex-direction: column;
+  }
+
+  .policy {
+    padding: 0;
+  }
+}

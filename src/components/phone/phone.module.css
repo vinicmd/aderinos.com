@@ -1,0 +1,10 @@
+.contactContainer {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+}
+
+.contact {
+  font-weight: 900;
+  font-size: 16px;
+}

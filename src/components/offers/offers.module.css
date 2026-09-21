@@ -1,0 +1,48 @@
+.offers {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 0 36px;
+}
+
+.title h2 {
+  font-weight: 800;
+  font-size: 40px;
+}
+
+.title h1 {
+  font-size: 60px;
+  font-weight: 800;
+}
+
+.packages {
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  padding: 12px;
+}
+
+@media (max-width: 790px) {
+  .packages {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .title h2 {
+    font-weight: 800;
+    font-size: 22px;
+  }
+
+  .title h1 {
+    font-size: 34px;
+    font-weight: 800;
+  }
+}

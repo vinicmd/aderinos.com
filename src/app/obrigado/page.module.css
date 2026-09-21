@@ -1,0 +1,29 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.container main {
+  padding: 12px;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.container p {
+  text-align: center;
+}
+
+.link {
+  background-color: black;
+  border: none;
+  padding: 12px 30px;
+  color: #eee;
+  font-size: 20px;
+}

@@ -1,0 +1,223 @@
+.card {
+  width: 100%;
+  max-width: 375px;
+  height: 625px;
+  border-radius: 1rem;
+  border: 1px solid #e5e7eb;
+  background-color: #ffffff;
+  color: #111827;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  transition: box-shadow 0.2s ease-in-out;
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card:hover {
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.topSection {
+  padding: 1.5rem 1.5rem 8px 1.25rem;
+}
+
+.title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 500;
+  letter-spacing: -0.025em;
+  color: #1f2937;
+}
+
+.priceArea {
+  margin-top: 0.5rem;
+  min-height: 70px;
+}
+
+.originalPrice {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #6b7280;
+  text-decoration: line-through;
+}
+
+.emptyPriceSpace {
+  font-size: 16px;
+  color: #fff;
+}
+
+.currentPriceContainer {
+  display: flex;
+  align-items: center;
+  line-height: 1;
+}
+
+.currencySymbol {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.025em;
+}
+
+.integerPart {
+  font-size: 3rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+}
+
+.decimalsContainer {
+  margin-left: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.decimalPart {
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.monthLabel {
+  font-size: 18px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.ctaButton {
+  margin-top: 1.5rem;
+  width: 100%;
+  border-radius: 9999px;
+  background-color: #000000;
+  padding: 0.75rem;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  transition:
+    opacity 0.2s,
+    transform 0.1s;
+}
+
+.ctaButton:hover {
+  opacity: 0.9;
+}
+
+.ctaButton:active {
+  transform: scale(0.99);
+}
+
+.featuresGrid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.featureItem {
+  display: flex;
+  flex-direction: column;
+}
+
+.fourthFeature {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.badge {
+  max-width: 100px;
+  border-radius: 0.25rem;
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.featureHighlight {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.875rem;
+  font-weight: 800;
+  line-height: 1.25;
+  color: #030712;
+}
+
+.featureDetail {
+  margin: 0.125rem 0 0 0;
+  font-size: 0.75rem;
+  color: #4b5563;
+}
+
+.bottomSection {
+  min-height: 250px;
+  background-color: #f8f9fb;
+  padding: 1.25rem 1.5rem 1.5rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.offersTitle {
+  margin: 0;
+  font-size: 0.6875rem;
+  font-weight: 800;
+  letter-spacing: 0.05em;
+  color: #1f2937;
+  text-transform: uppercase;
+}
+
+.offersList {
+  margin-top: 0.75rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.offerButton {
+  width: 158px;
+  border-radius: 0.5rem;
+  padding: 12px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  background-color: #ffffff;
+}
+
+.offerButtonActive {
+  border: 1px solid #000000;
+  color: #000000;
+  box-shadow: 0 0 0 1px #000000;
+}
+
+.offerButtonInactive {
+  border: 1px solid #d1d5db;
+  color: #374151;
+}
+
+.offerButtonInactive:hover {
+  border-color: #9ca3af;
+}
+
+.summaryArea {
+  margin-top: 1rem;
+  min-height: 64px;
+}
+
+.descriptionText {
+  margin: 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.legalText {
+  margin: 0.5rem 0 0 0;
+  font-size: 0.625rem;
+  line-height: 1.6;
+  color: #6b7280;
+}
