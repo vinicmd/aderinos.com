@@ -10,7 +10,7 @@ const AzoSansRegular = localFont({
 });
 
 const description = `Aderir Pacotes de Internet NOS - TV Net Voz - ao melhor preço. Na adesão a qualquer pacote de internet NOS escolha a oferta da TV ou Telemóvel ou Tablet. Instalação em 24h/48h.`;
-const title = "Aderir Pacotes de Internet";
+const title = "Aderir Pacotes NOS";
 const url = CONSTANTS.url;
 
 export const metadata: Metadata = {
