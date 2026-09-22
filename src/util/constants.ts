@@ -4,4 +4,5 @@ export const CONSTANTS = {
   telephone: 931064400,
   email: "nospacotestv@gmail.com",
   year,
+  url: "https://aderirnos.com",
 };

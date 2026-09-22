@@ -1,3 +1,4 @@
+import { CONSTANTS } from "@/util/constants";
 import { Plan } from "@/util/protocols/plan";
 import { NextResponse } from "next/server";
 
@@ -13,7 +14,7 @@ const seconds = String(now.getSeconds()).padStart(2, "0");
 
 const formattedDate = `${day}/${month}/${year} ${hours}:${minutes}:${seconds}`;
 
-const url = "nospacotes.com";
+const url = CONSTANTS.url;
 export async function POST(request: Request) {
   try {
     const body = await request.json();
@@ -41,7 +42,7 @@ export async function POST(request: Request) {
     }).format(rawNumber);
 
     const message = postal
-      ? `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}\n<b>Código Postal:</b> ${postal}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`
+      ? `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}\n${postal && "<b>Código Postal:</b>"}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`
       : `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}\n<b>Pacote:</b> ${plan.name}\n<b>Oferta:</b> ${plan.feature}\n<b>Valor:</b> ${price}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`;
 
     const telegramResponse = await fetch(
@@ -60,7 +61,9 @@ export async function POST(request: Request) {
     );
 
     if (!telegramResponse.ok) {
-      throw new Error("Falha na comunicação com o Telegram");
+      throw new Error(
+        `Falha na comunicação com o Telegram: ${telegramResponse.body}`,
+      );
     }
 
     return NextResponse.json({ success: true });
