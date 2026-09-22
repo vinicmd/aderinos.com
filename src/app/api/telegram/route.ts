@@ -42,8 +42,8 @@ export async function POST(request: Request) {
     }).format(rawNumber);
 
     const message = postal
-      ? `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}\n${postal && "<b>Código Postal:</b>"}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`
-      : `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}\n<b>Pacote:</b> ${plan.name}\n<b>Oferta:</b> ${plan.feature}\n<b>Valor:</b> ${price}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`;
+      ? `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}${postal && "\n<b>Código Postal:</b> " + postal}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`
+      : `<b>Novo Cliente</b>\n\n<b>Cliente:</b> ${name}\n<b>Telemóvel:</b> ${telephone}${plan.name && "\n<b>Pacote:</b> " + plan.name}${plan.offer?.length && "\n<b>Oferta:</b> " + plan.offer}${plan.price && "\n<b>Valor:</b> " + price}\n<b>Data/Hora:</b> ${formattedDate}\n<b>Origem:</b> ${url}`;
 
     const telegramResponse = await fetch(
       `https://api.telegram.org/bot${telegramToken}/sendMessage`,
