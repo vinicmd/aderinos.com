@@ -1,6 +1,6 @@
 import styles from "@/components/cover/cover.module.css";
 import Image from "next/image";
-import CoverageForm from "./coverageForm";
+import CoverageForm from "@/components/cover/coverageForm";
 
 export default function CoverArea() {
   return (

@@ -1,5 +1,5 @@
 import styles from "@/components/coverageModal/coverageModal.module.css";
-import { SendForm } from "./action";
+import { SendForm } from "@/components/coverageModal/action";
 import { Plan } from "@/util/protocols/plan";
 
 interface CoverageModalProps {

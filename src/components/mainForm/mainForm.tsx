@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { SendForm } from "../coverageModal/action";
+import { SendForm } from "@/components/coverageModal/action";
 import styles from "@/components/mainForm/mainForm.module.css";
 
 export const MainForm = () => {

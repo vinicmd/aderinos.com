@@ -1,27 +1,29 @@
+import { CONSTANTS } from "@/util/constants";
 import { MetadataRoute } from "next";
 
+const url = CONSTANTS.url;
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
-      url: "https://nospacotes.com/",
+      url,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1,
     },
     {
-      url: "https://nospacotes.com/politica-de-privacidade",
+      url: `${url}/politica-de-privacidade`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nospacotes.com/termos-de-uso",
+      url: `${url}/termos-de-uso`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,
     },
     {
-      url: "https://nospacotes.com/sobre-nos",
+      url: `${url}/sobre-nos`,
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 0.8,

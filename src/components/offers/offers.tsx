@@ -1,6 +1,6 @@
 import style from "@/components/offers/offers.module.css";
-import { PackageCard } from "../packageCard/packageCard";
-import { offersPlans } from "./data";
+import { PackageCard } from "@/components/packageCard/packageCard";
+import { offersPlans } from "@/components/offers/data";
 
 export function Offers() {
   return (

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./header.module.css";
-import { Phone } from "../phone/phone";
+import styles from "@/components/header/header.module.css";
+import { Phone } from "@/components/phone/phone";
 
 export const Header = () => {
   return (

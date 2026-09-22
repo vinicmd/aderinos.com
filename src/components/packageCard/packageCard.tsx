@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "@/components/packageCard/packageCard.module.css";
-import { CoverageModal } from "../coverageModal/coverageModal";
+import { CoverageModal } from "@/components/coverageModal/coverageModal";
 
 interface ServiceFeature {
   badgeLabel: string;
