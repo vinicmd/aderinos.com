@@ -7,7 +7,7 @@ declare global {
 export const triggerConversion = (transactionId?: string) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("event", "conversion", {
-      send_to: "AW-11027087416/LlFlCMr4lfIbELiAkIop",
+      send_to: "AW-11301015927/hmgjCM-CxYAdEPei34wq",
       value: 1.0,
       currency: "EUR",
       transaction_id: transactionId || crypto.randomUUID(),

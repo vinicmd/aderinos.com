@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import localFont from "next/font/local";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { CONSTANTS } from "@/util/constants";
+import { Suspense } from "react";
 
 const AzoSansRegular = localFont({
   src: "./AzoSans-Regular.woff2",
@@ -41,7 +43,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="pt-pt">
+    <html lang="pt-pt" suppressHydrationWarning>
+      <Suspense>
+        <GoogleAnalytics gaId="AW-11301015927" />
+      </Suspense>
       <body className={`${AzoSansRegular.className}`}>{children}</body>
     </html>
   );

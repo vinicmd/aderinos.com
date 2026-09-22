@@ -2,6 +2,7 @@ import { SendTelegramMessage } from "@/services/send-message-telegram";
 import { redirect } from "next/navigation";
 import styles from "@/components/coverageModal/coverageModal.module.css";
 import { Plan } from "@/util/protocols/plan";
+import { triggerConversion } from "@/util/google-conversion";
 
 export const SendForm = ({
   plan = {
@@ -26,6 +27,8 @@ export const SendForm = ({
       plan,
       postal,
     });
+
+    triggerConversion();
 
     formData.set("", "");
 
