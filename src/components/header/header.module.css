@@ -30,7 +30,9 @@
     height: 32px;
     width: auto;
   }
+}
 
+@media (max-width: 1100px) {
   .title {
     padding: 12px;
   }
