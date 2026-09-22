@@ -62,7 +62,7 @@ export async function POST(request: Request) {
 
     if (!telegramResponse.ok) {
       throw new Error(
-        `Falha na comunicação com o Telegram: ${telegramResponse.body}`,
+        `Falha na comunicação com o Telegram: ERRO ${telegramResponse.status}: ${telegramResponse.statusText}`,
       );
     }
 
