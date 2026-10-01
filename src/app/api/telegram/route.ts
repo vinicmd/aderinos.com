@@ -61,9 +61,41 @@ export async function POST(request: Request) {
     );
 
     if (!telegramResponse.ok) {
-      throw new Error(
-        `Falha na comunicação com o Telegram: ERRO ${telegramResponse.status}: ${telegramResponse.statusText}`,
+      const retry = await fetch(
+        `https://api.telegram.org/bot${telegramToken}/sendMessage`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            chat_id: "-1003067178127",
+            text: message,
+            parse_mode: "HTML",
+          }),
+        },
       );
+
+      if (!retry.ok) {
+        await fetch(
+          `https://api.telegram.org/bot${telegramToken}/sendMessage`,
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              chat_id: "-4685372862",
+              text: `Erro durante envio no telegram. dados de mensagem: ${message} `,
+              parse_mode: "HTML",
+            }),
+          },
+        );
+
+        throw new Error(
+          `Falha na comunicação com o Telegram: ERRO ${telegramResponse.status}: ${telegramResponse.statusText}`,
+        );
+      }
     }
 
     return NextResponse.json({ success: true });
