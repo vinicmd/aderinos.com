@@ -1,6 +1,8 @@
+import { showNOSName } from "@/util/showNOSName";
+
 export const offersPlans = [
   {
-    name: "NOS2",
+    name: `${showNOSName ? " NOS" : "Pacote "}2`,
     basePrice: 29.49,
     features: [
       {
@@ -26,7 +28,7 @@ export const offersPlans = [
     ],
   },
   {
-    name: "NOS3",
+    name: `${showNOSName ? " NOS" : "Pacote "}3`,
     basePrice: 40.49,
     features: [
       {
@@ -70,7 +72,7 @@ export const offersPlans = [
     ],
   },
   {
-    name: "NOS4+ Móvel",
+    name: `${showNOSName ? " NOS" : "Pacote "}4+ Móvel`,
     basePrice: 55.99,
     features: [
       {

@@ -2,6 +2,7 @@
 import Image from "next/image";
 import { SendForm } from "@/components/coverageModal/action";
 import styles from "@/components/mainForm/mainForm.module.css";
+import { showNOSName } from "@/util/showNOSName";
 
 export const MainForm = () => {
   return (
@@ -12,7 +13,7 @@ export const MainForm = () => {
       <SendForm />
       <div className={styles.imagecontainer}>
         <Image
-          src={"/assets/logo.svg"}
+          src={`${showNOSName ? "/assets/logo.svg" : "/assets/logo.png"}`}
           loading="eager"
           className={styles.logo}
           alt="Logo"

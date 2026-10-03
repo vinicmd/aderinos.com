@@ -4,13 +4,14 @@ import localFont from "next/font/local";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { CONSTANTS } from "@/util/constants";
 import { Suspense } from "react";
+import { showNOSName } from "@/util/showNOSName";
 
 const AzoSansRegular = localFont({
   src: "./AzoSans-Regular.woff2",
 });
 
-const description = `Aderir Pacotes de Internet NOS - TV Net Voz - ao melhor preço. Na adesão a qualquer pacote de internet NOS escolha a oferta da TV ou Telemóvel ou Tablet. Instalação em 24h/48h.`;
-const title = "Aderir Pacotes NOS";
+const description = `Aderir Pacotes de Internet ${showNOSName && "NOS "}- TV Net Voz - ao melhor preço. Na adesão a qualquer pacote de internet NOS escolha a oferta da TV ou Telemóvel ou Tablet. Instalação em 24h/48h.`;
+const title = `Aderir Pacotes ${showNOSName ? "NOS" : "de Internet"}`;
 const url = CONSTANTS.url;
 
 export const metadata: Metadata = {

@@ -1,1 +1,1 @@
-export const showNOSName = true;
+export const showNOSName = false;

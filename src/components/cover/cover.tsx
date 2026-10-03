@@ -1,6 +1,7 @@
 import styles from "@/components/cover/cover.module.css";
 import Image from "next/image";
 import CoverageForm from "@/components/cover/coverageForm";
+import { showNOSName } from "@/util/showNOSName";
 
 export default function CoverArea() {
   return (
@@ -19,12 +20,15 @@ export default function CoverArea() {
 
       <div className={styles.content}>
         <h1 className={styles.mainTitle}>
-          Aderir Pacotes de <br className={styles.desktopBreak} /> Internet NOS
+          Aderir Pacotes de <br className={styles.desktopBreak} /> Internet{" "}
+          {showNOSName && "NOS"}
         </h1>
         <h2 className={styles.subTitle}>TV NET VOZ</h2>
 
         <div className={styles.card}>
-          <h3 className={styles.cardTitle}>Verificar cobertura NOS</h3>
+          <h3 className={styles.cardTitle}>
+            Verificar cobertura {showNOSName && "NOS"}
+          </h3>
           <CoverageForm />
         </div>
       </div>

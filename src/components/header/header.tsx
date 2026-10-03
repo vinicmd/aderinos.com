@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import styles from "@/components/header/header.module.css";
 import { Phone } from "@/components/phone/phone";
+import { showNOSName } from "@/util/showNOSName";
 
 export const Header = () => {
   return (
@@ -10,7 +11,7 @@ export const Header = () => {
         <div className={styles.title}>
           <Link href="/">
             <Image
-              src={"/assets/logo.svg"}
+              src={`${showNOSName ? "/assets/logo.svg" : "/assets/logo.png"}`}
               loading="eager"
               className={styles.logo}
               alt="Logo"
